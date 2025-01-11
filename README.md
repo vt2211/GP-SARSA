@@ -1,4 +1,4 @@
-# GP-SARSA
+# Implementation of GP-SARSA and its Relaxations
 
 Based on Engel et al. (2005), GP-SARSA offers key advantages over traditional Reinforcement Learning methods SARSA and TD by leveraging Gaussian Processes to generalize across state-action spaces without discretization, **particularly excelling in environments with continuous or large state-action spaces**. It provides both Q-value predictions and uncertainty estimates, enhancing exploration through uncertainty-guided strategies. Unlike traditional methods, GP-SARSA handles stochastic environments robustly and supports model-free policy improvement using Bayesian inference. Its kernel-based approach encodes prior knowledge and prevents overfitting by smoothing noisy data. Implementing kernel sparsification ensures computational efficiency by maintaining a compact representation of state-action pairs – instead of storing each (s, a) pair, we maintain a dictionary inclusive only of pairs that are sufficiently dis-similar (w.r.t. the kernel function).
 
